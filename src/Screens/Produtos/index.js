@@ -4,11 +4,12 @@ import {
     TouchableOpacity,
     View,
     Image,
-    ScrollView
+    ScrollView,
+    TextInput,
+    Button
 } from 'react-native';
 
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { FontAwesome, AntDesign } from '@expo/vector-icons';
 
 import { useNavigation } from "@react-navigation/native";
 
@@ -18,11 +19,13 @@ export default function Produtos() {
         <SafeAreaView style={styles.container}>
             <ScrollView style={{ flex: 1 }}>
                 <View style={{ flex: 1 }}>
-                    <TouchableOpacity onPress={() => navigation.navigate('Contato')}>
-                        <Text> Ir para página de Contato</Text>
+                    <TouchableOpacity onPress={() => navigation.navigate('Contato')}
+                        style={styles.pressionado}>
+                        <Text> Ir para Contato</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity onPress={() => navigation.navigate('Home')}>
-                        <Text> Ir para página Home</Text>
+                    <TouchableOpacity onPress={() => navigation.navigate('Home')}
+                        style={styles.pressionado}>
+                        <Text> Ir para Home</Text>
                     </TouchableOpacity>
                     <Image
                         source={require('./../../../assets/tomato.jpg')}
@@ -36,6 +39,18 @@ export default function Produtos() {
                     <Text style={styles.textoSecundario}>
                         Pagando no PIX: R$6,00
                     </Text>
+                    <TextInput
+                        style={styles.Quantidade}
+                        placeholder=" Digite a quantidade"
+                        keyboardType="number-pad"
+                    />
+                    <Button
+                        style={styles.botao}
+                        title="Adicionar ao carrinho"
+                        onPress={() => alert("Produto adicionado ao carrinho")}
+                    />
+
+                    <View style={styles.separador}></View>
 
                     <Image
                         source={require('./../../../assets/melancia.jpg')}
@@ -49,6 +64,18 @@ export default function Produtos() {
                     <Text style={styles.textoSecundario}>
                         Pagando no PIX: R$7,00
                     </Text>
+                    <TextInput
+                        style={styles.Quantidade}
+                        placeholder=" Digite a quantidade"
+                        keyboardType="number-pad"
+                    />
+                    <Button
+                        style={styles.botao}
+                        title="Adicionar ao carrinho"
+                        onPress={() => alert("Produto adicionado ao carrinho")}
+                    />
+
+                    <View style={styles.separador}></View>
 
                     <Image
                         source={require('./../../../assets/laranja.jpg')}
@@ -62,7 +89,19 @@ export default function Produtos() {
                     <Text style={styles.textoSecundario}>
                         Pagando no PIX: R$4,00
                     </Text>
-                    
+                    <TextInput
+                        style={styles.Quantidade}
+                        placeholder=" Digite a quantidade"
+                        keyboardType="number-pad"
+                    />
+                    <Button
+                        style={styles.botao}
+                        title="Adicionar ao carrinho"
+                        onPress={() => alert("Produto adicionado ao carrinho")}
+                    />
+
+                    <View style={styles.separador}></View>
+
                     <Image
                         source={require('./../../../assets/alface.jpg')}
                         style={styles.imagem}></Image>
@@ -75,7 +114,19 @@ export default function Produtos() {
                     <Text style={styles.textoSecundario}>
                         Pagando no PIX: R$ 4,00
                     </Text>
-                    
+                    <TextInput
+                        style={styles.Quantidade}
+                        placeholder=" Digite a quantidade"
+                        keyboardType="number-pad"
+                    />
+                    <Button
+                        style={styles.botao}
+                        title="Adicionar ao carrinho"
+                        onPress={() => alert("Produto adicionado ao carrinho")}
+                    />
+
+                    <View style={styles.separador}></View>
+
                     <Image
                         source={require('./../../../assets/banana.jpg')}
                         style={styles.imagem}></Image>
@@ -88,7 +139,16 @@ export default function Produtos() {
                     <Text style={styles.textoSecundario}>
                         Pagando no PIX: R$ 6,00
                     </Text>
-                
+                    <TextInput
+                        style={styles.Quantidade}
+                        placeholder=" Digite a quantidade"
+                        keyboardType="number-pad"
+                    />
+                    <Button
+                        style={styles.botao}
+                        title="Adicionar ao carrinho"
+                        onPress={() => alert("Produto adicionado ao carrinho")}
+                    />
                 </View>
             </ScrollView>
         </SafeAreaView>
@@ -118,4 +178,28 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         padding: 5,
     },
+    Quantidade: {
+        textAlign: 'center'
+    },
+    botao: {
+        padding: 15,
+        borderRadius: 15,
+        width: '95%',
+        alignItems: 'center',
+        elevation: 10,
+    },
+    separador: {
+    marginBottom: 5,
+    marginTop: 5,
+    height: 1,
+    backgroundColor: '#ccc',
+    width: '95%',
+    elevation: 2,
+  },
+  pressionado:{
+    padding: 15,
+        borderRadius: 15,
+        width: '95%',
+        alignItems: 'center'
+  }
 });
