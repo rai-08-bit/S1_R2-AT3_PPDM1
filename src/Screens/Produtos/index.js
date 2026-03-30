@@ -160,6 +160,7 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
+        backgroundColor: '#F5F5F5',
     },
     imagem: {
         height: 180,
@@ -169,37 +170,46 @@ const styles = StyleSheet.create({
         elevation: 15
     },
     texto: {
-        fontSize: 25,
+        fontSize: 22,
+        fontWeight: 'bold',
+        color: '#2D6A4F',
         textAlign: 'center',
-        padding: 5,
+        marginTop: 10,
     },
     textoSecundario: {
-        fontSize: 17,
+        fontSize: 18,
+        color: '#666',
         textAlign: 'center',
-        padding: 5,
     },
     Quantidade: {
-        textAlign: 'center'
+        backgroundColor: '#F0F0F0',
+        borderRadius: 8,
+        padding: 10,
+        marginHorizontal: 20,
+        marginBottom: 10,
+        textAlign: 'center',
+        borderWidth: 1,
+        borderColor: '#DDD',
     },
     botao: {
         padding: 15,
         borderRadius: 15,
         width: '95%',
         alignItems: 'center',
-        elevation: 10,
+        elevation: 10
     },
     separador: {
-    marginBottom: 5,
-    marginTop: 5,
-    height: 1,
-    backgroundColor: '#ccc',
-    width: '95%',
-    elevation: 2,
-  },
-  pressionado:{
-    padding: 15,
+        marginBottom: 5,
+        marginTop: 5,
+        height: 1,
+        backgroundColor: '#ccc',
+        width: '95%',
+        elevation: 2,
+    },
+    pressionado: {
+        padding: 15,
         borderRadius: 15,
         width: '95%',
         alignItems: 'center'
-  }
+    }
 });

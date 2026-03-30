@@ -29,9 +29,9 @@ export default function Home() {
             <Text> Ir para página de Contato</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity 
-          onPress={() => navigation.navigate('Produtos')}
-          style={styles.botao}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate('Produtos')}
+            style={styles.botao}>
             <Text> Ir para página de Produtos</Text>
           </TouchableOpacity>
         </View>
@@ -45,24 +45,29 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    backgroundColor: '#F9FCF9',
+    padding: 40
   },
   imagem: {
-    height: 250,
-    width: '95%',
-    padding: '20%',
-    borderRadius: 10,
-    elevation: 15
+    height: 220,
+    width: '90%',
+    marginTop: 20,
+    borderRadius: 20,
   },
   texto: {
-    fontSize: 17,
+    fontSize: 16,
+    lineHeight: 24,
+    color: '#34495e',
     textAlign: 'center',
-    padding: 5,
+    marginVertical: 25,
+    paddingHorizontal: 20,
+    fontWeight: '400',
   },
   botao: {
-        padding: 15,
-        borderRadius: 15,
-        width: '95%',
-        alignItems: 'center'
-    },
+    padding: 15,
+    borderRadius: 15,
+    width: '95%',
+    alignItems: 'center'
+  }
 });

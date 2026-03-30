@@ -58,10 +58,14 @@ export default function Contato() {
             <Text style={styles.texto}>   Endereço</Text>
           </FontAwesome>
           <Text style={styles.texto}>Rua Fulano, Nº 000, Cidadezinha - SP</Text>
-          
+
           <View style={styles.separador}></View>
 
-          <Text style={styles.texto}>CNPJ</Text>
+          <Text style={{
+            fontSize: 16,
+            color: '#34495e',
+            marginTop: 2,
+          }}>CNPJ</Text>
           <Text style={styles.texto}>XX.XXX.XXX/0001-ZZ</Text>
         </View>
       </View>
@@ -75,16 +79,13 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#F9FCF9'
   },
   texto: {
-    fontSize: 17,
-    textAlign: 'center',
-    padding: 5,
+    fontSize: 16,
+    color: '#34495e',
+    marginTop: 2,
+    textAlign: 'center'
   },
   conteudoPrincipal: {
     width: '95%',
@@ -94,13 +95,11 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   conteudoSecundario: {
-    marginTop: 50,
+    width: '100%',
+    backgroundColor: '#FFF',
+    borderRadius: 20,
     padding: 20,
-    marginBottom: 50,
-    width: '95%',
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 10,
+    elevation: 4,
   },
   input: {
     width: '95%',
